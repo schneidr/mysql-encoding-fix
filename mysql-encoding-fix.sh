@@ -5,12 +5,12 @@ usage() {
     cat <<USAGE
 Usage: $0 <options>
 Options:
-  -d database
-  -h host
-  -u username
   -c charset
   -C collation
+  -d database
+  -h host
   -q quiet (no colors)
+  -u username
 USAGE
     exit 1
 }
