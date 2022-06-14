@@ -2,7 +2,7 @@
 set -e
 
 usage() {
-    echo <<USAGE
+    cat <<USAGE
 Usage: $0 <options>
 Options:
   -d database
@@ -14,8 +14,6 @@ Options:
 USAGE
     exit 1
 }
-
-MYSQLCMD=""
 
 USE_COLORS=1
 
@@ -57,7 +55,7 @@ if [ "$USE_COLORS" -eq 1 ]; then
 fi
 
 mysql_cmd() {
-    OUTPUT=$(mysql $MYSQLHOST $MYSQLUSER --batch --skip-column-names --database $DATABASE -e "$@")
+    OUTPUT=$(mysql "$MYSQLHOST" "$MYSQLUSER" --batch --skip-column-names --database "$DATABASE" -e "$@")
     echo "$OUTPUT"
 }
 
