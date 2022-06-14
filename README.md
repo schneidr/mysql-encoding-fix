@@ -10,12 +10,12 @@ The script shows which entities have the correct encoding set and generates a se
 
 ### Options
 
-  * -d database
-  * -h host
-  * -u username
   * -c charset
   * -C collation
+  * -d database
+  * -h host
   * -q quiet (no colors)
+  * -u username
 
 ### Examples
 
